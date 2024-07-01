@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1312px;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid #D0D5DD;
+
+}
+
+.navbar h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+
+}
+
+.AddButton {
+    /* width: 143px; */
+    padding: 10px 20px 10px 20px;
+    gap: 8px;
+    border-radius: 5px;
+    border: none;
+    background: #0C39C7;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    font-family: "Montserrat";  
+  }
+
+  .AddButton:hover {
+    cursor: pointer;
+  }

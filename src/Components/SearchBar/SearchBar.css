@@ -1,0 +1,26 @@
+.SearchContainer {
+    max-width: 1312px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.searchbar {
+    display: flex;
+    max-width: 578px;
+    width: 100%;
+    padding: 10px 14px 10px 14px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    border: 1px solid #CECECE;
+}
+
+select {
+    max-width: 156px;
+    padding: 10px 14px;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #CECECE
+}

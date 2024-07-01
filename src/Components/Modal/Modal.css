@@ -1,0 +1,42 @@
+.modal-container {
+    max-width: 654px;
+    width: 100%;
+    top: 79px;
+    left: 409px;
+    padding: 40px;
+    gap: 32px;
+    border-radius: 12px;
+    border: 1px solid #CECECE;
+
+    position: absolute;
+    background-color: white;
+    
+}
+
+.modal-container textarea {
+    display: flex;
+    max-width: 574px;
+    padding: 14px 16px 14px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD
+
+}
+
+.modal-container input {
+    max-width: 574px;
+    padding: 14px 16px 14px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD
+}
+
+.button-container {
+    display: flex;
+    max-width: 574px;
+    gap: 12px;
+}
+
+p, h3, h2 {
+    margin: 0;
+}
