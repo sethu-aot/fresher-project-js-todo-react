@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import InputField from '../../Shared/InputField';
 import './Modal.css';
-import Button from '../../Shared/button'; // Ensure correct import path and casing
+import Button from '../../Shared/button';
+import closeButton from './x.svg';
 
 function Modal({ showModal, closeModal }) {
   const [taskTitle, setTaskTitle] = useState('');
@@ -23,7 +24,7 @@ function Modal({ showModal, closeModal }) {
   const handleSubmit = () => {
     // Construct task object
     const task = {
-      id: new Date().getTime(), // Unique ID (you can generate it differently if needed)
+      id: new Date().getTime(), 
       title: taskTitle,
       description: taskDescription,
       dueDate: dueDate,
@@ -47,17 +48,25 @@ function Modal({ showModal, closeModal }) {
   return (
     showModal && (
       <div className='modal-container'>
-        <button className="close-button" onClick={closeModal}>X</button>
-        <h2>Add Task</h2>
-        <h3>Title</h3>
-        <InputField className={"searchbar"} id={"search"} placeholder={"eg: Create two ad banners"} value={taskTitle} onChange={handleTitleChange}/>
-        <h3>Description</h3>
-        <textarea id="description" placeholder='Add your task description' value={taskDescription} onChange={handleDescriptionChange}></textarea>
-        <h3>Due Date</h3>
-        <input type="date" id="date" value={dueDate} onChange={handleDateChange}/>
+        <div className="modalHeader">
+          {/* <button className="close-button" onClick={closeModal}>X</button> */}
+          <img src={closeButton} onClick={closeModal} alt="close button" />
+          <h2>Add Task</h2>
+        </div>
+
+        <div className="modalContent">
+
+          <h3>Title</h3>
+          <InputField className={"searchbar"} id={"search"} placeholder={"eg: Create two ad banners"} value={taskTitle} onChange={handleTitleChange}/>
+          <h3>Description</h3>
+          <textarea id="description" placeholder='Add your task description' value={taskDescription} onChange={handleDescriptionChange}></textarea>
+          <h3>Due Date</h3>
+          <input type="date" id="date" value={dueDate} onChange={handleDateChange}/>
+        </div>
         <div className="button-container">
-          <Button btnText={'Cancel'} onClick={closeModal} />
           <Button btnText={'Submit'} onClick={handleSubmit} />
+          <Button className="cancelButton" btnText={'Cancel'} onClick={closeModal} />
+          
         </div>
       </div>
     )
