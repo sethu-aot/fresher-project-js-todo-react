@@ -32,21 +32,17 @@ function EditModal({ task, updateTask, closeModal }) {
         <span className="close" onClick={closeModal}>&times;</span>
         <h2>Edit Task</h2>
         <form onSubmit={handleSubmit}>
-          <label>
-            Title:
+            <h3>Title:</h3>
             <InputField type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-          </label>
-          <label>
-            Description:
+          
+            <h3>Description:</h3>
             <textarea value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
-          </label>
-          <label>
-            Due Date:
+            <h3>Due Date:</h3>
             <InputField type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
-          </label>
           <div className="button-container">
+            <Button btnText={'Update'} type="submit" />
             <Button btnText={'Cancel'} onClick={closeModal} />
-            <Button btnText={'Update Task'} type="submit" />
+            
           </div>
         </form>
       </div>
