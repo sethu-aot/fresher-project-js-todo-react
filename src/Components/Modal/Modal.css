@@ -1,4 +1,6 @@
 .modal-container {
+    display: flex;
+    flex-direction: column;
     max-width: 654px;
     width: 100%;
     top: 79px;
@@ -33,10 +35,28 @@
 
 .button-container {
     display: flex;
+    flex-direction: row-reverse;
     max-width: 574px;
     gap: 12px;
 }
 
 p, h3, h2 {
     margin: 0;
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #CECECE 1px solid;
+}
+
+.modalContent {
+    max-width: 574px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: #CECECE 1px solid;
+
 }
